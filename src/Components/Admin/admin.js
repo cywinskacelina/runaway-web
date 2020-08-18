@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Volunteer from "./volunteer";
+import NavBar from "../NavBar/NavBar";
 
 class Admin extends React.Component {
   state = {
@@ -62,7 +63,7 @@ class Admin extends React.Component {
 
   handleUpdate = (volunteer) => {
     axios
-      .patch(`http://localhost:7000/api/volunteer/${volunteer._id}`, {
+      .patch(`https://runaway-practicum.herokuapp.com/api/volunteer/${volunteer._id}`, {
         email: volunteer.newEmail,
       })
       .then((response) => {
@@ -75,16 +76,19 @@ class Admin extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={(e) => this.handleSubmit(e)}>
+      <div style={{ position: "absolute", width: "100%", height: "100%" }}>
+        <NavBar pages={[""]}/>
+        <div style={{ marginTop: "100px", marginLeft: "150px" }}>
+        <form  onSubmit={(e) => this.handleSubmit(e)}>
           <input
             type="search"
             name="search"
             value={this.state.search}
             onChange={(e) => this.handleChange(e)}
             placeholder="Volunteer Email"
+            style={{ borderRadius: "5px" }}
           />
-          <input type="submit" value="Search" />
+          <input type="submit" value="Search" style={{ background: "#ACDAFF", borderRadius: "5px" }}/>
         </form>
         <br></br>
         {this.state.volunteers.map((volunteer) => (
@@ -97,6 +101,7 @@ class Admin extends React.Component {
             onEmailChange={this.handleEmailChange}
           />
         ))}
+        </div>
       </div>
     );
   }
