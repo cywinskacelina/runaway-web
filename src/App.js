@@ -4,7 +4,7 @@ import BlogPage from "./Components/Page/blogPage";
 import Register from "./Components/Auth/register";
 import Login from "./Components/Auth/login";
 import Resource from "./Components/Resource/resource";
-import Admin from "./Components/Admin/admin.js";
+import Admin from "./Components/Page/adminPage.js";
 import ChatObservation from './Components/Page/chatPage';
 import ChatCreation from "./Components/Chat/chatCreate";
 

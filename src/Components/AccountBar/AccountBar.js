@@ -11,7 +11,7 @@ export default function(){
     return(
         <div className = "accountBar">
             <div className = "accountContainer">
-                {`Welcome Back, ${user.email}`}
+                {`Welcome Back, ${user}`}
                 <img className = "avatar" src = "/asset/avatar.svg"/>
             </div>
         </div>
