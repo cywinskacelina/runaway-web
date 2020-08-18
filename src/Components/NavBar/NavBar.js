@@ -5,7 +5,7 @@ import "../../styles/navBar.css";
 
 export default function NavBar(props){
     return(
-        <div className = "navBar col-2">
+        <div className = "navBar col-2" style = {{ position: "fixed", top: "0px" }}>
             <img src = "/asset/logo.svg" className = "logo" alt="logo"></img>
             {
                 props.pages.map(item =>{
