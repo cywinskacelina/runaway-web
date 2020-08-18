@@ -43,18 +43,20 @@ class Blogs extends React.Component {
 
 
     return (
-        <div class="container col-6">
+        <div>
+          <div className="row d-flex justify-content-center">
               { this.state.blogs.map(blog => (
                   <div key={blog._id} style={ blogStyle }> 
                         <h1 style={{ position: "relative", left: "25px", top: "15px", textAlign: "left" }}>{blog.title}</h1>
                         <h4 style={{ marginRight: "25px", textAlign: "right" }}>{blog.author}</h4>
                         <h4 style={{ marginRight: "25px", textAlign: "right" }}>{moment(blog.date).format("MMMM DD, Y")}</h4>
                         <img src={blog.imageURL} alt="img" style={{ height: "300px", width: "450px"}} onError={e => e.target.style.display="none"}/>
-                        <p style={{ textAlign: "left",  marginLeft: "25px", marginTop: "15px", paddingBottom: "15px" }} dangerouslySetInnerHTML={{ __html: blog.content }}/>
+                        <p style={{ textAlign: "left",  marginLeft: "25px", marginTop: "15px"}} dangerouslySetInnerHTML={{ __html: blog.content }}/>
                 </div>
               )) }
+          </div>
         
-        <ReactPaginate style={{position:"absolute", right:"100%"}}
+        <ReactPaginate 
                     pageCount={pageCount}
                     marginPagesDisplayed={2}
                     pageRangeDisplayed={5}
@@ -62,7 +64,6 @@ class Blogs extends React.Component {
                     containerClassName={"pagination"}
                     subContainerClassName={"pages pagination"}
                     activeClassName={"active"}/>
-
       </div>
     );
   }

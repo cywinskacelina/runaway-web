@@ -1,8 +1,9 @@
 .accountBar{
     width:100%;
     border-bottom: 1px lightgray solid;
-    height: 8%;
+    height: 10vh;
     position: relative;
+    left: 25px;
 }
 
 .avatar{

@@ -67,7 +67,6 @@ class Volunteer extends React.Component {
   }
 
   render() {
-    const volunteer = this.props.volunteer;
     return (
       <div>
         {this.renderVolunteer()}
