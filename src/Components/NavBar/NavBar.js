@@ -10,6 +10,7 @@ export default function NavBar(props){
                 <img src = "/asset/logo.svg" className = "logo" alt="logo"></img>
                 {
                     props.pages.map(item =>{
+                        console.log(item);
                         return React.createElement(NavCell,{item : item});
                     })
                 }

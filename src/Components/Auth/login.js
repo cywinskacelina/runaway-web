@@ -1,5 +1,6 @@
 import React from "react";
 import axios from 'axios';
+import "./auth.css";
 
 class Login extends React.Component{
 
@@ -66,33 +67,29 @@ class Login extends React.Component{
 
     render(){
         return(
-            <div>
-                <label>
-                Username
+            <div className = "authContainer">
+
+                <img id = "logo" src = "/asset/logo.svg"/>
+                <img src = "/asset/runaway.svg"/>
+                <img style = {{marginBottom:"45px"}}src = "/asset/employee.svg"/>
                 <input
                     type='text'
                     name='username'
                     value={this.state.title}
+                    placeholder= "username"
                     onChange={this.handleChange}
                 />
-                </label>
-                
-                <br></br>
-                <br></br>
-                
-                <label>
-                Password
+
                 <input
                     type='text'
                     name='password'
                     value={this.state.title}
                     onChange={this.handleChange}
+                    placeholder="password"
                 />
-                </label>
                 
                 <br></br>
                 <br></br>
-
 
                 <div onClick = {this.handleClick}>SUBMIT</div>
               </div>

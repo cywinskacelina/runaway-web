@@ -5,7 +5,7 @@ export default async function(access){
     if(!JWT){
         return false;
     }else{
-        let fetched = await fetch("http://localhost:7000/api/findUser", {
+        let fetched = await fetch("https://runaway-practicum.herokuapp.com/api/findUser", {
             headers: { Authorization: `JWT ${JWT}` }
         });
         fetched = await fetched.json();

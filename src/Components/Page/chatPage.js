@@ -18,9 +18,11 @@ export default function ChatPage(props) {
       style={{ position: "absolute", width: "100%", height: "100%" }}
       className="con container row"
     >
-      <NavBar pages={["Dashboard", "Chat Room", "Resources"]} />
-      
-      <Chat />
+      <NavBar pages={[["Dashboard",""], ["Chat Room","/chat/observe"], ["Resources","/chat/resources"]]} />
+      <div className = "col-10" >
+        <AccountBar/>
+        <Chat />
+      </div>
     </div>
   );
 }
