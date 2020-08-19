@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import socketioclient from "socket.io-client";
 import { Launcher } from 'react-chat-window';
+import ms from 'pretty-ms';
 import "./chat.css";
+import { useImperativeHandle } from "react";
 
 function ChatComponent(props){
 
@@ -18,6 +20,7 @@ function ChatComponent(props){
     }
 
     function handleClick(){
+        socket.emit("disconnectUser", "volunteer");
         let index = props.joinedRoom.indexOf(props.props);
         props.deleteRoom(index);
     }
@@ -27,7 +30,6 @@ function ChatComponent(props){
         console.log("HEHHRHERHHER");
         socket_joinRoom(parseInt(props.props[0],10));
         console.log(messages);
-
         
         return () => {
             socket.off("updateMessage");
@@ -47,6 +49,7 @@ function ChatComponent(props){
             }]
             );
         });
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 

@@ -21,7 +21,7 @@ export default function BlogPage(props) {
 
     return (
         <div style={{ position: "absolute", width: "100%", height: "100%" }} className="con container row">
-            <NavBar pages={["All Posts", "Your Posts", "Drafts"]} />
+            <NavBar pages={[["All Posts","/blog/allposts"], ["Your Posts","/blog/yourposts"], ["Drafts",""]]} />
             <div className = "col-10">
                     <AccountBar />
                     <Route path="/blog/yourposts" component={BlogEditor} />

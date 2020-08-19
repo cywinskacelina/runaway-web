@@ -1,0 +1,31 @@
+
+.authContainer{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    justify-items: center;
+}
+
+#logo{
+    height: 180px;
+}
+
+.authContainer > *{
+    left:50%;
+    margin: 0;
+    position: relative;
+    transform: translate(-50%);
+    margin-bottom: 10px;
+}
+.authContainer input{
+    border: 1px black solid;
+    border-radius: 5px;
+    color: black;
+    width: 250px;
+    padding-left: 10px;
+}
+
+.authContainer > *{
+    display: block;
+}

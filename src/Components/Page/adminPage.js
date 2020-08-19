@@ -18,7 +18,7 @@ export default function ChatPage(props) {
       style={{ position: "absolute", width: "100%", height: "100%" }}
       className="con container row"
     >
-      <NavBar pages={["Dashboard", "Resources", "Media"]} />
+      <NavBar pages={[["Blog","/blog/allposts"], ["Chat","/chat/observe"]]} />
       <Admin />
       <Link to ="/blog/allposts">Blog</Link>
     </div>
