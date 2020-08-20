@@ -89,16 +89,19 @@ class Admin extends React.Component {
           />
           <input type="submit" value="Search" style={{ background: "#ACDAFF", borderRadius: "5px" }}/>
         </form>
-        <br></br>
+        <hr></hr>
         {this.state.volunteers.map((volunteer) => (
-          <Volunteer
-            key={volunteer._id}
-            volunteer={volunteer}
-            onDelete={this.handleDelete}
-            onEdit={this.handleEdit}
-            onUpdate={this.handleUpdate}
-            onEmailChange={this.handleEmailChange}
-          />
+          <div>
+            <Volunteer
+              key={volunteer._id}
+              volunteer={volunteer}
+              onDelete={this.handleDelete}
+              onEdit={this.handleEdit}
+              onUpdate={this.handleUpdate}
+              onEmailChange={this.handleEmailChange}
+            />
+            <hr></hr>
+          </div>
         ))}
         </div>
       </div>
