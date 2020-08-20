@@ -12,7 +12,7 @@ class BlogEditor extends React.Component {
             blogContent: '',
             imageURL: '',
             author: '',
-            readTime: ''
+            readTime: '',
             announcement: false
         }
 
@@ -22,10 +22,12 @@ class BlogEditor extends React.Component {
     }
 
     handleChange(event) {
-        if(event.target.name === 'announcement') {
-            this.setState({ [event.target.name]: event.target.checked })         
-        } else if (event.target) {
-            this.setState({ [event.target.name]: event.target.value })
+        if (event.target) {
+            if(event.target.name === 'announcement') {
+                this.setState({ [event.target.name]: event.target.checked })         
+            }else{
+            this.setState({ [event.target.name]: event.target.value });
+            }
         } else {
             this.setState({ blogContent: event })
         }
@@ -41,7 +43,7 @@ class BlogEditor extends React.Component {
         }
         console.log(blogData);
          if (this.state.announcement == true) {
-             // Create axios post statement here
+            axios.post("https://runaway-practicum.herokuapp.com/api/announcement/post", blogData);
              console.log('this is an announcement');
          } else {
             //POST METHOD
