@@ -89,7 +89,7 @@ class Admin extends React.Component {
           />
           <input type="submit" value="Search" style={{ background: "#ACDAFF", borderRadius: "5px" }}/>
         </form>
-        <hr></hr>
+        <hr style={{ border: "1px lightgrey solid"}}></hr>
         {this.state.volunteers.map((volunteer) => (
           <div>
             <Volunteer
@@ -100,7 +100,7 @@ class Admin extends React.Component {
               onUpdate={this.handleUpdate}
               onEmailChange={this.handleEmailChange}
             />
-            <hr></hr>
+            <hr style={{ border: "1px lightgrey solid"}}></hr>
           </div>
         ))}
         </div>
