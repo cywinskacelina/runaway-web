@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import Volunteer from "./volunteer";
-import NavBar from "../NavBar/NavBar";
 
 class Admin extends React.Component {
   state = {
@@ -89,7 +88,7 @@ class Admin extends React.Component {
           />
           <input type="submit" value="Search" style={{ background: "#ACDAFF", borderRadius: "5px" }}/>
         </form>
-        <hr style={{ border: "1px lightgrey solid"}}></hr>
+        <hr style={{ border: "1px lightgrey solid" }}></hr>
         {this.state.volunteers.map((volunteer) => (
           <div>
             <Volunteer
@@ -100,7 +99,7 @@ class Admin extends React.Component {
               onUpdate={this.handleUpdate}
               onEmailChange={this.handleEmailChange}
             />
-            <hr style={{ border: "1px lightgrey solid"}}></hr>
+            <hr style={{ border: "1px lightgrey solid" }}></hr>
           </div>
         ))}
         </div>
