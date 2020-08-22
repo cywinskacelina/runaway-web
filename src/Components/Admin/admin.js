@@ -75,38 +75,33 @@ class Admin extends React.Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div style={{height: "100%" }} className = "col-10">
-=======
-      <div style={{ position: "absolute", width: "100%", height: "100%" }}>
-        <NavBar pages={[""]}/>
->>>>>>> Design for admin page
+      <div style={{ height: "100%" }} className = "col-10">
         <div style={{ marginTop: "100px", marginLeft: "150px" }}>
-        <form  onSubmit={(e) => this.handleSubmit(e)}>
-          <input
-            type="search"
-            name="search"
-            value={this.state.search}
-            onChange={(e) => this.handleChange(e)}
-            placeholder="Volunteer Email"
-            style={{ borderRadius: "5px" }}
-          />
-          <input type="submit" value="Search" style={{ background: "#ACDAFF", borderRadius: "5px" }}/>
-        </form>
-        <hr style={{ border: "1px lightgrey solid" }}></hr>
-        {this.state.volunteers.map((volunteer) => (
-          <div>
-            <Volunteer
-              key={volunteer._id}
-              volunteer={volunteer}
-              onDelete={this.handleDelete}
-              onEdit={this.handleEdit}
-              onUpdate={this.handleUpdate}
-              onEmailChange={this.handleEmailChange}
+          <form  onSubmit={(e) => this.handleSubmit(e)}>
+            <input
+              type="search"
+              name="search"
+              value={this.state.search}
+              onChange={(e) => this.handleChange(e)}
+              placeholder="Volunteer Email"
+              style={{ borderRadius: "5px" }}
             />
-            <hr style={{ border: "1px lightgrey solid" }}></hr>
-          </div>
-        ))}
+            <input type="submit" value="Search" style={{ background: "#ACDAFF", borderRadius: "5px" }}/>
+          </form>
+          <hr style={{ border: "1px lightgrey solid" }}></hr>
+          {this.state.volunteers.map((volunteer) => (
+            <div>
+              <Volunteer
+                key={volunteer._id}
+                volunteer={volunteer}
+                onDelete={this.handleDelete}
+                onEdit={this.handleEdit}
+                onUpdate={this.handleUpdate}
+                onEmailChange={this.handleEmailChange}
+              />
+              <hr style={{ border: "1px lightgrey solid" }}></hr>
+            </div>
+          ))}
         </div>
       </div>
     );
