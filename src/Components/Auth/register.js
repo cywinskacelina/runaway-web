@@ -9,7 +9,7 @@ class Register extends React.Component{
         this.state = { username: '',
                        email: '',
                        password: '',
-                       access: ''} 
+                       access: 'Admin'} 
 
         //bind 'this'
         this.handleChange = this.handleChange.bind(this);
@@ -46,7 +46,7 @@ class Register extends React.Component{
         }
 
         //POST METHOD
-        axios.post("/api/volunteer/register", credentials);
+        axios.post("https://runaway-practicum.herokuapp.com/api/volunteer/register", credentials);
     }
 
     render(){

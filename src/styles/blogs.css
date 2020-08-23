@@ -2,7 +2,6 @@
   margin: 15px auto;
   list-style: none;
   outline: none;
-  position: absolute;
   left:50%;
 }
 .pagination > .active > a{
