@@ -27,7 +27,7 @@ class Announcements extends React.Component {
 
     render() { 
         return (
-            <div style={{ marginTop: "100px" }}>
+            <div style={{ marginTop: "50px" }}>
                 <h1>Announcements</h1>
                 <hr style={{ border: "1px lightgrey solid" }}></hr>
                 {this.state.announcements.map(ann => (

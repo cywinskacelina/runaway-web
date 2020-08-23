@@ -7,7 +7,7 @@ import Resource from "./Components/Resource/resource";
 import Admin from "./Components/Page/adminPage.js";
 import ChatObservation from './Components/Page/chatPage';
 import ChatCreation from "./Components/Chat/chatCreate";
-import Announcements from "./Components/Announcements/announcements";
+import Announcements from "./Components/Page/announcementsPage";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
