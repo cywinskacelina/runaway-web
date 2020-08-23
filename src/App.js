@@ -7,10 +7,12 @@ import Resource from "./Components/Resource/resource";
 import Admin from "./Components/Page/adminPage.js";
 import ChatObservation from './Components/Page/chatPage';
 import ChatCreation from "./Components/Chat/chatCreate";
+import Announcements from "./Components/Announcements/announcements";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
       <Route exact path="/blog/:subPage" component={BlogPage} />
       <Route exact path="/resource/write" component={Resource} />
       <Route exact path="/admin/overview" component={Admin} />
+      <Route exact path="/announcements" component={Announcements} />
       <Route exact path="/" component={Login} />
 
 
