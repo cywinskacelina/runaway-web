@@ -8,14 +8,14 @@ class Announcements extends React.Component {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:7000/api/announcement/get")
+        axios.get("https://runaway-practicum.herokuapp.com/api/announcement/get")
             .then((response) => {
                 this.setState({ announcements: response.data });
             })
     }
 
     handleDelete = id => {
-        axios.delete(`http://localhost:7000/api/announcement/${id}`)
+        axios.delete(`https://runaway-practicum.herokuapp.com/api/announcement/${id}`)
             .then((response) => {
                 console.log(response.data);
                 if (response.status === 200) {
