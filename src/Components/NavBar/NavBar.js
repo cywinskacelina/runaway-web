@@ -5,8 +5,8 @@ import "../../styles/navBar.css";
 
 export default function NavBar(props){
     return(
-        <div className = "col-2" >
-            <div className= "navBar position-fixed">
+        <div className = "col-2 no-pad" >
+            <div className= "navBar">
                 <img src = "/asset/logo.svg" className = "logo" alt="logo"></img>
                 {
                     props.pages.map(item =>{

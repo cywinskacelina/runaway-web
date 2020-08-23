@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Admin from "../Admin/admin";
 import check from "../Auth/check";
+import AccountBar from "../AccountBar/AccountBar";
 
 export default function ChatPage(props) {
   useEffect(() => {
@@ -19,8 +20,10 @@ export default function ChatPage(props) {
       className="con container row"
     >
       <NavBar pages={[["Blog","/blog/allposts"], ["Chat","/chat/observe"]]} />
+      <div className = "col-10">
+      <AccountBar/>
       <Admin />
-      <Link to ="/blog/allposts">Blog</Link>
+      </div>
     </div>
   );
 }

@@ -76,7 +76,7 @@ class Admin extends React.Component {
 
   render() {
     return (
-      <div style={{height: "100%" }} className = "col-10">
+      <div>
         <div style={{ marginTop: "100px", marginLeft: "150px" }}>
         <form  onSubmit={(e) => this.handleSubmit(e)}>
           <input
