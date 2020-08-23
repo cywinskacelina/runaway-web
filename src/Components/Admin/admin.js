@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import Volunteer from "./volunteer";
-import NavBar from "../NavBar/NavBar";
 
 class Admin extends React.Component {
   state = {
@@ -78,28 +77,31 @@ class Admin extends React.Component {
     return (
       <div>
         <div style={{ marginTop: "100px", marginLeft: "150px" }}>
-        <form  onSubmit={(e) => this.handleSubmit(e)}>
-          <input
-            type="search"
-            name="search"
-            value={this.state.search}
-            onChange={(e) => this.handleChange(e)}
-            placeholder="Volunteer Email"
-            style={{ borderRadius: "5px" }}
-          />
-          <input type="submit" value="Search" style={{ background: "#ACDAFF", borderRadius: "5px" }}/>
-        </form>
-        <br></br>
-        {this.state.volunteers.map((volunteer) => (
-          <Volunteer
-            key={volunteer._id}
-            volunteer={volunteer}
-            onDelete={this.handleDelete}
-            onEdit={this.handleEdit}
-            onUpdate={this.handleUpdate}
-            onEmailChange={this.handleEmailChange}
-          />
-        ))}
+          <form  onSubmit={(e) => this.handleSubmit(e)}>
+            <input
+              type="search"
+              name="search"
+              value={this.state.search}
+              onChange={(e) => this.handleChange(e)}
+              placeholder="Volunteer Email"
+              style={{ borderRadius: "5px" }}
+            />
+            <input type="submit" value="Search" style={{ background: "#ACDAFF", borderRadius: "5px" }}/>
+          </form>
+          <hr style={{ border: "1px lightgrey solid" }}></hr>
+          {this.state.volunteers.map((volunteer) => (
+            <div>
+              <Volunteer
+                key={volunteer._id}
+                volunteer={volunteer}
+                onDelete={this.handleDelete}
+                onEdit={this.handleEdit}
+                onUpdate={this.handleUpdate}
+                onEmailChange={this.handleEmailChange}
+              />
+              <hr style={{ border: "1px lightgrey solid" }}></hr>
+            </div>
+          ))}
         </div>
       </div>
     );
