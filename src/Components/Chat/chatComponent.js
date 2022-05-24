@@ -16,10 +16,10 @@ class ChatComponent extends React.Component {
         this._onMessageUpdate = this._onMessageUpdate.bind(this);
     }
 
-
+    //Send the server the room number to join.
     socket_joinRoom(room) {
         this.state.socket.emit("joinRoom", room);
-        this.state.socket.emit("volunteerJoined", "dummy");
+        this.state.socket.emit("volunteerJoined", "joined");
         console.log("volunteerJoined sent");
     }
 
