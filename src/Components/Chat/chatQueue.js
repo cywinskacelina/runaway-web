@@ -65,8 +65,8 @@ function ChatObservation(props) {
             {/******************************************************/}
              
             <div style = {{"height":"90%"}}>
-                {joinedRoom.map((item)=>{
-                    return (<ChatComponent deleteRoom = {deleteRoom} joinedRoom = {joinedRoom} props = {item}/>);
+                {joinedRoom.map((roomInfo)=>{
+                    return (<ChatComponent deleteRoom = {deleteRoom} joinedRoom = {joinedRoom} props = {roomInfo}/>);
                 })}
             </div>
         </div>
